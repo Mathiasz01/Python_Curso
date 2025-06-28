@@ -2,13 +2,13 @@
 Condicionales if
 
 '''
-dato=int(input(''Ingrese unn número: ''))
+dato=int(input('Ingrese unn número: '))
 if dato > 0:
-    print(''El número es positivo'')    
-    elif dato < 0:
-    print(''El número es negativo'')
+    print('El número es positivo')
+elif dato < 0:
+    print('El número es negativo')
 else:
-    print(''El número es cero'')
+    print('El número es cero')
 
 #un if
 if dato > 0:
