@@ -1,7 +1,7 @@
-from flask import blueprint, Flask, jsonify, request
+from flask import Blueprint, Flask, jsonify, request
 
 
-logout= blueprint('logout', __name__)
+logout= Blueprint('logout', __name__)
 
 @logout.route('/logout', methods=['POST'])
 def llamarServicioSet():

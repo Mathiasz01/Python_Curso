@@ -11,13 +11,14 @@ def llamarServicioSet():
     print(user, password)
     print('User enviado:', user,' Password enviado:', password)
 
-    codRes, menRes, accion,rol = inicializarvariables(user, password)
+    codRes, menRes, accion, rol = inicializarvariables(user, password)
 
     salida = {
         'codRes': codRes,
         'menRes': menRes, 
         'usuario': user,
-        'accion': accion
+        'accion': accion,
+        'rol': rol
     }
 
     return jsonify(salida)
@@ -30,15 +31,14 @@ def inicializarvariables(user, password):
     menRes = 'OK'       
     accion = 'login exitoso'
     rol = 'Admin'
-    userlocal = 'myUser'
-    passwordlocal = 'unida2345'
+    userlocal = 'mathias'
+    passwordlocal = 'unida123'
+
 
     try:
         if user == userlocal and password == passwordlocal:
-            codRes = 'Sin_Error'
-            menRes = 'OK'       
+            print('Login exitoso')
             accion = 'login exitoso'
-            rol = 'Admin'
         else:
             codRes = 'Error' 
             menRes = 'Usuario o contraseña incorrectos'
@@ -52,6 +52,7 @@ def inicializarvariables(user, password):
         accion = 'error en el login'
         rol = 'N/A'
         user = 'N/A'
+        return codRes, menRes, accion, rol, user
 
 
 
