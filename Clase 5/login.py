@@ -8,10 +8,9 @@ login = Blueprint('login', __name__)
 def llamarServicioSet():
     user = request.json.get('user')
     password = request.json.get('password')
-    print(user, password)
     print('User enviado:', user,' Password enviado:', password)
 
-    codRes, menRes, accion, rol = inicializarvariables(user, password)
+    codRes, menRes, accion, rol, user = inicializarvariables(user, password)
 
     salida = {
         'codRes': codRes,
@@ -52,8 +51,8 @@ def inicializarvariables(user, password):
         accion = 'error en el login'
         rol = 'N/A'
         user = 'N/A'
-        return codRes, menRes, accion, rol, user
 
 
 
     return codRes, menRes, accion, rol, user
+    
