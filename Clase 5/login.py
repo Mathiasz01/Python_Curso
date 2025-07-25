@@ -55,3 +55,4 @@ def inicializarvariables(user, password):
 
 
     return codRes, menRes, accion, rol, user
+    
